@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Stop Hamachi
+sudo hamachi -c /etc/hamachi logout && \
+sudo hamachi -c /etc/hamachi stop
+ 
+# Start Hamachi
+sudo hamachi -c /etc/hamachi start && \
+sudo hamachi -c /etc/hamachi login && \
+sudo hamachi -c /etc/hamachi go-offline magasweran && \
+sudo hamachi -c /etc/hamachi go-online magasweran && \
+sudo hamachi -c /etc/hamachi get-nicks && \
+sleep 5s
+sudo hamachi -c /etc/hamachi list
